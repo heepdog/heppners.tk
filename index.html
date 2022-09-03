@@ -24,6 +24,23 @@
 
 <body>
 
+  <script src="https://unpkg.com/vue@3"></script>
+
+    <div id="app">{{ message }}</div>
+
+    <script>
+      const { createApp } = Vue
+
+      createApp({
+        data() {
+          return {
+            message: 'Hello Vue!'
+          }
+        }
+      }).mount('#app')
+    </script>
+
+
   <!-- Add your site or application content here -->
   <h1>heppners.tk Placeholder</h1>
   <p>Hello world! This is HTML5 Boilerplate.</p>
