@@ -1,10 +1,18 @@
 
-const { createApp } = Vue
+// const { createApp } = Vue
 
-createApp({
+// createApp({
+//     data() {
+//     return {
+//         message: 'Hello Vue!'
+//     }
+//     }
+// }).mount('#app')
+
+export default {
     data() {
-    return {
-        message: 'Hello Vue!'
-    }
-    }
-}).mount('#app')
+      return { count: 0 }
+    },
+    template: `<div>count is {{ count }}</div>`
+  }
+  

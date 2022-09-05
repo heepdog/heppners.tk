@@ -24,9 +24,25 @@
 
 <body>
 
-  <script src="https://unpkg.com/vue@3"></script>
+  {% comment %} <script src="https://unpkg.com/vue@3"></script> {% endcomment %}
+  
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script>
+  
+  <script type="module">
+    import { createApp } from 'vue'
+    import MyComponent from './js/main.js'
+  
+    createApp(MyComponent).mount('#app')
+  </script>
+  
 
-  <div id="app">{{ message }}</div>
+  {% comment %} <div id="app">{{ message }}</div> {% endcomment %}
 
 
   <!-- Add your site or application content here -->
@@ -34,7 +50,7 @@
   <p>Hello world! This is HTML5 Boilerplate.</p>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  {% comment %} <script src="js/main.js"></script> {% endcomment %}
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
